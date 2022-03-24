@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    display: flex;
+    justify-content: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: hsl(0, 0%, 100%);
+    transition: all 0.35s;
+}
+.background-image{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 350px;
+    z-index: -1;
+}
+.background-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left;
+}
+.container{
+    width: 100%;
+    max-width: 700px;
+    margin: 0 30px;
+    margin-top: 100px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.theme{
+    width: 20px;    
+    cursor: pointer;
+}
+.title{
+    color: rgb(252, 233, 130);
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+.new-todo{
+    height: 70px;
+    margin-top: 50px;
+    border-radius: 10px ;
+    display: flex;
+    background-color: rgb(34, 65, 112);
+}
+.check{
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.check-mark{
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    color: aliceblue;
+    border: 3px solid hsl(237, 14%, 26%);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.check-mark:hover{  
+    background: linear-gradient(135deg, rgb(252, 233, 130) 0% ,#b8f358 100%) ;
+}
+.new-todo-input{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.new-todo-input form{
+    flex-grow: 1;
+}
+.new-todo-input input{
+    width: 100%;
+    padding: 10px 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 20px;
+}
+
+.todo-items-wrapper{
+    margin-top: 30px;
+    background-color: rgb(34, 65, 112);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 20px 20px 30px 0 rgba(0, 0, 0, 0.4);
+}
+.todo-item{
+    width: 100%;
+    display: flex;
+    height: 70px;
+    border-bottom: 2px solid rgb(252, 233, 130);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+.todo-item:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0pc 7px 0px rgb(207, 182, 35);
+    border-color: rgb(207, 182, 35);
+}
+
+.todo-text{
+    display: flex;
+    align-items: center;
+    color: aliceblue;
+}
+.todo-items-info{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.todo-items-info div{
+    padding: 0 30px;
+    color: hsl(237, 94%, 81%);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.items-statuses span{
+    padding: 0 5px;
+    cursor: pointer;
+}
+.items-statuses span:hover,
+.items-statuses span.active,
+.items-clear:hover {
+    color: hsl(220, 98%, 61%);
+}
+.items-clear{
+    cursor: pointer;
+    text-align: end;
+}
+.checked-item .todo-text{
+    text-decoration: line-through 4px  yellowgreen ;
+}
+.checked-item .check-mark{
+    background: linear-gradient(135deg, rgb(252, 233, 130) 0% ,#b8f358 100%) ;
+}
+.theme img{
+    width:30px;
+    height: 30px;
+}
+.hiddenDarkBtn{
+    display: none;
+}
+.alert{
+    position: fixed;
+    width:200px;
+    height: 100px;
+    background-color: tomato;
+    display:none;
+}

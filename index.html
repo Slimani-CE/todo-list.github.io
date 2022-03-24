@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" class="darkModeStyle" href="">
+    <link rel="shortcut icon" href="images/SVG/laptop-code-solid.svg" type="image/x-icon"> 
+    <script src="script.js"></script>
+    <title>TODO list app</title>
+</head>
+<body>
+    <div class="alert">
+        
+    </div>
+    <div class="background-image">
+        <img src="images/background.png" alt="Just a background image">
+    </div>
+    <div class="container">
+
+        <div class="header">
+            <div class="title">
+                TODO
+            </div>
+            <div class="theme" onclick="actionDarkMode(this)">
+                <img class="darkBtn " src="images/SVG/brightness-high.svg" alt="dark mode">
+                <img class="darkBtn hiddenDarkBtn" src="images/SVG/brightness-high-fill.svg" alt="dark mode">
+            </div>
+        </div>
+
+        <div class="new-todo">
+            <div class="check">
+                <div class="check-mark"></div>
+            </div>
+            <div class="new-todo-input">
+                <form onsubmit="addItem(event)">
+                    <input id="todo-input" type="text" placeholder="Create a new todo...">
+                </form>
+            </div>
+        </div>
+
+        <div class="todo-items-wrapper">
+            
+            <div class="todo-items">
+                <div status="active" onclick="checkItem(this)" class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        task 1
+                    </div>
+                </div>
+                <div status="active" onclick="checkItem(this)" class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        task 2
+                    </div>
+                </div>
+                <div status="active" onclick="checkItem(this)" class="todo-item">
+                    <div class="check">
+                        <div class="check-mark">
+                            
+                        </div>
+                    </div>
+                    <div class="todo-text">
+                        task 3
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="todo-items-info">
+                <div class="items-left">
+                    3 items left
+                </div>
+                <div class="items-statuses">
+                    <span onclick="generateAllItems(this)" class="active">All</span>
+                    <span onclick="generateActiveItems(this)">Active</span>
+                    <span onclick="generateCompletedItems(this)">Completed</span>
+                </div>
+                <div onclick="clearComplitedItems()" class="items-clear">
+                    <span>Clear Completed</span>
+                </div>
+                <div onclick="clearAll()" class="items-clear">
+                    <span>Clear all</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
